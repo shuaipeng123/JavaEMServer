@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<!-- START SNIPPET: xworkSample -->
+<struts>
+
+    <!-- Some or all of these can be flipped to true for debugging -->
+    <constant name="struts.action.extension" value="do" />
+   
+    <package name="package" extends="struts-default">
+       
+       <!-- product relative  begin -->
+       
+       <!-- for test -->
+       <action name="write" class="action.JsonAction"  method="write"/>  
+       
+       
+       <action name="doLogin" class="action.LoginAction"  method="doLogin"/> 
+       
+       <action name="doRegister" class="action.RegisterAction"  method="doRegister"/> 
+       
+       <action name="getUsers" class="action.UserAction" method="getUsers"/>
+       
+       <action name="getGroupOfUser" class="action.GroupChatAction"  method="getGroupOfUser"/> 
+       <action name="getUsersOfGroup" class="action.GroupChatAction"  method="getUsersOfGroup"/>
+       <action name="getMsgs" class="action.GroupChatAction"  method="getMsgs"/>
+       
+       <action name="dropFromGroup" class="action.GroupAction"  method="dropFromGroup"/>
+       <action name="joinGroup" class="action.GroupAction"  method="joinGroup"/>
+       <action name="deleteGroup" class="action.GroupAction"  method="deleteGroup"/>
+       <action name="addGroup" class="action.GroupAction"  method="addGroup"/>
+       
+       
+       <action name="getDatesHavingEvents" class="action.EventAction"  method="getDatesHavingEvents"/>
+       <action name="getEventsByGroup" class="action.EventAction"  method="getEventsByGroup"/>
+       <action name="getEventsByDate" class="action.EventAction"  method="getEventsByDate"/>
+       <action name="assignEvent" class="action.EventAction"  method="assignEvent"/>
+       <action name="deleteEvent" class="action.EventAction"  method="deleteEvent"/>
+       <action name="updateStatusOfEvent" class="action.EventAction"  method="updateStatusOfEvent"/>
+       <action name="updateEvent" class="action.EventAction"  method="updateEvent"/>
+       <action name="updateEventBatches" class="action.EventAction" method="updateEventBatches"/>
+       
+       <action name="getApplications" class="action.ApplicationAction"  method="getApplications"/>
+       <action name="addApplicaton" class="action.ApplicationAction"  method="addApplicaton"/>
+       <action name="finishApplication" class="action.ApplicationAction"  method="finishApplication"/>
+       
+       <action name="getGroupsIncludingPersonal" class="action.ProgressAction"  method="getGroupsIncludingPersonal"/>
+        <action name="getGroupStats" class="action.ProgressAction"  method="getGroupStats"/>
+       
+    </package>
+    
+    
+    
+
+</struts>
+
+<!-- END SNIPPET: xworkSample -->
+
